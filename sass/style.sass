@@ -1,0 +1,133 @@
+body
+    margin: 0
+    font-family: 'Francois One', sans-serif
+    box-sizing: border-box
+section 
+    height: 100vh
+    width: calc(100vw - 77px)
+    margin-left: 60px
+.menu
+    position: fixed
+    height: 100vh
+    width: 60px
+    background-color: #181818
+    // position: relative
+    color: #e2e2e2
+    .menu__logo
+        position: absolute
+        width: 80%
+        padding: 20px 10%   
+        font-size: 20px
+        text-align: center
+        color: rgba(8, 253, 216, 0.71)
+        background-color: #131313
+        font-weight: bold
+        // img 
+        //     width: 80%
+        //     margin: 30px 10%             
+    .menu__icons
+        margin-top: 50vh
+        display: flex
+        flex-direction: column
+        transform: translateY(-50%)
+        i
+            font-size: 20px
+            margin: 30px auto
+            cursor: pointer
+            &:hover
+                color: #08fdd8
+        
+.about
+    display: flex
+    // background-color: red
+    background-image: url("../img/work1.jpg")
+    background-position: center
+    background-size: cover      
+    .about__text
+        position: absolute
+        top: 40%
+        transform: translateY(-50%)
+        left: 200px
+        font-size: 40px
+        color: #e2e2e2
+        .about__text--letter
+            color: #fff
+            letter-spacing: 1px
+            &:hover
+                animation: logo 2s linear
+
+.contact
+    display: flex
+    .contact__form
+        width: 45%
+        background-color: #252525
+        .contact__form--content
+            display: flex
+            flex-direction: column
+            margin-left: 15%
+            margin-top: 20%
+            h1
+                font-size: 40px
+                font-weight: bold
+                color: #08fdd8
+            input 
+                width: calc(40% )
+                margin: 5px
+                padding: 20px
+                box-sizing: border-box
+                border: 0
+                background-color: #3c3c3c
+                // outline-color: #3c3c3c
+            textarea
+                max-width: calc(80% + 12px)
+                min-width: calc(80% + 12px)
+                margin: 5px
+                min-height: 150px
+                max-height: 350px
+                background-color: #3c3c3c
+                border: 0
+                padding: 20px
+                box-sizing: border-box
+            button
+                width: 100px
+                margin-top: 30px
+                border: 1px solid #08fdd8
+                color: #08fdd8
+                text-transform: uppercase
+                padding: 10px
+                background-color: #252525
+                margin-left: calc(80% + 12px - 100px)
+                border-radius: 5px
+    .contact__map
+        width: 55%
+        filter: grayscale(90%)
+         
+@keyframes logo 
+    10%
+         transform: rotate(0deg)
+    // 20%
+    //      margin-left: 20%
+    //      margin-top: 5%
+    // 30%
+    //      margin-left: 30%
+    //      margin-top: 20%
+    // 40%
+    //      margin-left: 40%
+    //      margin-top: 8%
+    50% 
+        transform: rotate(360deg)
+    // 60%
+    //      margin-left: 60%
+    //      margin-top: 12%
+    // 70%
+    //      margin-left: 70%
+    //      margin-top: 20%
+    // 80%
+    //      margin-left: 80%
+    //      margin-top: 18%
+    // 90%
+    //      margin-left: 90%
+    //      margin-top: 20%
+    // 100% 
+    //     padding-bottom: : 2px
+    //     transform: rotate(360deg)
