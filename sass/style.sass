@@ -3,7 +3,7 @@ body
     font-family: 'Francois One', sans-serif
     box-sizing: border-box
 section 
-    height: 100vh
+    min-height: 100vh
     width: calc(100vw - 77px)
     margin-left: 60px
 .menu
@@ -22,6 +22,7 @@ section
         color: rgba(8, 253, 216, 0.71)
         background-color: #131313
         font-weight: bold
+        cursor: context-menu
         // img 
         //     width: 80%
         //     margin: 30px 10%             
@@ -43,20 +44,118 @@ section
     background-image: url("../img/work1.jpg")
     background-position: center
     background-size: cover      
+    filter: grayscale(100%)
+    opacity: 0.9
     .about__text
         position: absolute
+        cursor: context-menu
         top: 40%
         transform: translateY(-50%)
         left: 200px
         font-size: 40px
         color: #e2e2e2
         .about__text--letter
+            position: relative
             color: #fff
             letter-spacing: 1px
             &:hover
                 animation: logo 2s linear
 
-.contact
+.aboutme__cloud
+    width: 400px
+    height: 400px
+    background-color: #cecece
+    margin-left: 300px
+    margin-top: 200px
+    // transform: rotate(10deg)
+    border-radius: 50%
+    &:after
+        content: " "
+        // position: absolute
+        bottom: 0px
+        margin-left: -50px
+        padding: 180px
+        background-color: #cecece
+        border-radius: 50%
+    span
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+.projects
+    margin-left: 10%
+    width: 80%
+    display: flex
+    flex-direction: column
+    .projects__sort 
+        button
+            border: 2px solid #08fdd8
+            padding: 10px
+            background-color: #fff
+            margin-right: 10px
+            cursor: pointer
+            border-radius: 5px
+            &:hover
+                background-color: #08fdd8
+    .projects__items
+        display: flex   
+        flex-wrap: wrap
+        flex-direction: row
+        justify-content: space-around
+        .projects__item
+            width: 26%
+            height: 250px
+            margin: 20px 0
+            position: relative
+            overflow: hidden
+            border-radius: 2px
+            &:hover>img
+                    transform: scale(1.1)
+                    filter: grayscale(80%)
+            &:hover>.projects__item--technologies,  &:hover>.projects__item--title
+                opacity: 0.9
+            .projects__item--technologies, .projects__item--title
+                transition: 0.5s
+                position: absolute
+                background-color: #fff
+                width: 100%
+                text-align: center
+                opacity: 0
+                bottom: 0
+                left: 0
+                padding: 5px 0
+                color: #123121
+            .projects__item--title
+                top: 0
+                height: 20px
+            img
+                position: absolute
+                width: 100%
+                height: 100%
+                transition: .5s
+                &:hover~.projects__item--text
+                    opacity: 1
+            .projects__item--text
+                opacity: 0
+                transition: .5s
+                // background-color: #e2e2e2ab
+                width: 80%
+                height: 60%
+                padding-top: 10px
+                text-align: center
+                position: absolute
+                color: #fff
+                left: 50%
+                top: 50%
+                transform: translate(-50%,-50%)
+                font-size: 25px
+                &:hover
+                    opacity: 1
+                a
+                    color: #fff
+                    margin: 10px
+                    font-size: 2.5em
+.contact    
     display: flex
     .contact__form
         width: 45%
