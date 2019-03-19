@@ -1,18 +1,28 @@
+$laptopL: 1440px
+$laptopS: 1024px
+$tabblet: 768px
+$mobileL: 425px
+    
 body
     margin: 0
     font-family: 'Francois One', sans-serif
     box-sizing: border-box
+    background-color: #f9fafd
+    // background-color: $red
     // background-image: -webkit-linear-gradient(15deg,#e2e2e2 0%,#123 100%)
 section 
     min-height: 100vh
     width: calc(100vw - 77px)
     margin-left: 60px
     position: relative
-    
+    @media (max-width: $tabblet)
+      margin-left: 0px
+      width: 100%
     .section__tittle
         text-align: center
         position: relative
         font-size: 40px
+        margin-bottom: 100px
         // background-color: #123
         &:after
             content: ""
@@ -30,13 +40,15 @@ section
     background-color: #181818
     // position: relative
     color: #e2e2e2
+    @media (max-width: $tabblet)
+            display: none
     .menu__logo
         position: absolute
         width: 80%
         padding: 20px 10%   
         font-size: 20px
         text-align: center
-        color: rgba(8, 253, 216, 0.71)
+        background-image: linear-gradient(to right,#ff8a00,#da1b60)
         background-color: #131313
         font-weight: bold
         cursor: context-menu
@@ -53,7 +65,7 @@ section
             margin: 30px auto
             cursor: pointer
             &:hover
-                color: #08fdd8
+                color: #f84545
         
 .about
     display: flex
@@ -74,7 +86,7 @@ section
         color: #e2e2e2
         .about__text--letter
             position: relative
-            color: #E31B6D
+            color: #f84545
             letter-spacing: 1px
             &:hover
                 animation: logo 2s linear
@@ -83,10 +95,10 @@ section
             left: 100px
         button
             padding: 10px
-            border: 2px solid #E31B6D
+            border: 2px solid #f84545
             background-color: Transparent
             border-radius: 5px
-            color: #E31B6D
+            color: #f84545
             font-size: 20px
             cursor: pointer
             transition: .2s linear
@@ -96,7 +108,7 @@ section
             &:hover>i
                 transform: rotate(90deg)
             &:hover
-                background-color: #E31B6D
+                background-color: #f84545
                 color: #fff
 
 
@@ -110,57 +122,70 @@ section
             font-size: 150px
     .aboutme__content
         margin-top: 50px
-        // transform: translateY(-50%)
-        // background-color: #432432
         position: relative
         display: flex
-        @media (max-width: 1440px)
-            flex-direction: column
-        // @media (max-width: 768px)
-        //     width: 90%
+        flex-direction: column
+            
         .aboutme__content__info
             position: relative
             display: flex
-            flex-direction: column
-            text-align: center
-            width: 50vw
-            .aboutme__content__info--photo
-                margin-left: 50%
-                margin-top: 10%
-                overflow: hidden
-                border-radius: 70% 40% 35% 45%
-                background-color: #000
-                // margin-bottom: 20px
+            // flex-direction: column
+            // text-align: center
+            width: calc(100vw - 77px)
+            @media (max-width: $laptopS)
+                margin-left: 50%   
+                transform: translateX(-50%)
+            .aboutme__content__info--photo 
+                width: 50vw
+                margin-top: 10vh
                 position: relative
-                width: 30vh
-                height: 35vh
-                transform: rotate(45deg) translateX(-50%)
-                img
-                    position: absolute
-                    width: 140%
-                    top: -10%
-                    left: -20%
-                    transform: rotate(-45deg) translateX(15%)
+                .aboutme__content__info--photo--shape 
+                    margin-left: 50%
+                    box-sizing: border-box
+                    overflow: hidden
+                    border-radius: 70% 40% 35% 45%
+                    background-color: #000
+                    // margin-bottom: 20px
+                    position: relative
+                    width: 30vh
+                    height: 35vh
+                    transform: rotate(45deg) translateX(-50%)
+                    img
+                        position: absolute
+                        width: 140%
+                        top: -10%
+                        left: -20%
+                        transform: rotate(-45deg) translateX(15%)
             .aboutme__content__info--text
-                margin-top: -100px
+                // margin-top: -50px
+                position: relative
                 display: flex
                 flex-direction: column
+                width: 50vw
+                *
+                    transform: translateX(40%)
+                    width: 50%
                     
+                
 
     .aboutme__cloud
-        width: 500px
+        width: 30%
         height: 400px
         right: 100px
-        top: 50%
-        transform: translateY(-50%)
         overflow: hidden
+        margin-left: 75%   
+        transform: translateX(-50%)  
+        @media (max-width: $laptopS)
+            margin-left: 50%   
+            transform: translateX(-50%)  
         p
+            position: relative
             border: 1px solid #123
-            width: 100%
+            width: 98%
             height: 10px
             &:before
                 content: ""
-                // position: absolute
+                position: absolute
                 left: -100%
                 width: 100%
                 height: 10px
@@ -180,6 +205,8 @@ section
             // border-radius: 5px
             &:hover
                 background-color: #08fdd8
+            @media (max-width: 768px)
+                flex-direction: column
         .active
             background-color: #08fdd8
     .projects__items
@@ -194,6 +221,7 @@ section
             position: relative
             overflow: hidden
             border-radius: 2px
+            box-shadow: 0 3px 5px -1px rgba(30,41,69,.2), 0 1px 18px 0 rgba(30,41,69,.12), 0 6px 10px 0 rgba(30,41,69,.14)
             @media (max-width: 1440px)
                 width: 45%
             @media (max-width: 768px)
@@ -246,9 +274,13 @@ section
                     font-size: 2.5em
 .contact    
     display: flex
+    @media (max-width: 1440px)
+            flex-direction: column
     .contact__form
         width: 45%
         background-color: #252525
+        @media (max-width: 1440px)
+                width: 100%
         .contact__form--content
             display: flex
             flex-direction: column
@@ -279,6 +311,7 @@ section
             button
                 width: 100px
                 margin-top: 30px
+                margin-bottom: 30px
                 border: 1px solid #08fdd8
                 color: #08fdd8
                 text-transform: uppercase
@@ -289,6 +322,8 @@ section
     .contact__map
         width: 55%
         filter: grayscale(90%)
+        @media (max-width: 1440px)
+                width: 100%
 
 footer
     text-align: center
