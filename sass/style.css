@@ -4,6 +4,25 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #f9fafd;
+  font-size: 18px;
+}
+
+@media (max-width: 1440px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 10px;
+  }
 }
 
 section {
@@ -11,6 +30,7 @@ section {
   width: calc(100vw - 77px);
   margin-left: 60px;
   position: relative;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -24,7 +44,7 @@ section .section__tittle {
   text-align: center;
   position: relative;
   font-size: 40px;
-  margin-bottom: 100px;
+  margin: 50px 0;
 }
 
 section .section__tittle:after {
@@ -93,37 +113,51 @@ section .section__tittle:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url("../img/work1.jpg");
+  background-image: url("../img/work3.jpg");
   background-position: center;
   background-size: cover;
+  background-blend-mode: saturation;
 }
 
 .about .about__text {
   position: absolute;
+  text-align: center;
   cursor: context-menu;
-  top: 40%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 200px;
-  font-size: 40px;
+  top: 35%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 1.5em;
   color: #e2e2e2;
 }
 
-.about .about__text .about__text--letter {
+.about .about__text h1 {
+  -webkit-animation: opacity 1s;
+          animation: opacity 1s;
+}
+
+.about .about__text .about__text--name {
   position: relative;
   color: #f84545;
   letter-spacing: 1px;
+  -webkit-animation: opacity 4s;
+          animation: opacity 4s;
 }
 
-.about .about__text .about__text--letter:hover {
-  -webkit-animation: logo 2s linear;
-          animation: logo 2s linear;
+.about .about__text .about__text--text {
+  -webkit-animation: opacity 5s;
+          animation: opacity 5s;
 }
 
 @media (max-width: 1440px) {
   .about .about__text {
-    font-size: 30px;
-    left: 100px;
+    top: 38%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about .about__text {
+    top: 40%;
   }
 }
 
@@ -133,10 +167,12 @@ section .section__tittle:after {
   background-color: Transparent;
   border-radius: 5px;
   color: #f84545;
-  font-size: 20px;
+  font-size: 0.8em;
   cursor: pointer;
   -webkit-transition: .2s linear;
   transition: .2s linear;
+  -webkit-animation: opacity 7s;
+          animation: opacity 7s;
 }
 
 .about .about__text button i {
@@ -155,20 +191,14 @@ section .section__tittle:after {
   color: #fff;
 }
 
+@media (max-width: 1024px) {
+  .about .about__text button {
+    padding: 8px;
+  }
+}
+
 .aboutme {
   position: relative;
-}
-
-.aboutme .aboutme__skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.aboutme .aboutme__skills i {
-  font-size: 150px;
 }
 
 .aboutme .aboutme__content {
@@ -177,55 +207,35 @@ section .section__tittle:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 1024px) {
+  .aboutme .aboutme__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.aboutme .aboutme__content .aboutme__content__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.aboutme .aboutme__content .aboutme__content__info {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: calc(100vw - 77px);
+  width: 80%;
 }
 
 @media (max-width: 1024px) {
   .aboutme .aboutme__content .aboutme__content__info {
+    width: 100vw;
     margin-left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-}
-
-.aboutme .aboutme__content .aboutme__content__info .aboutme__content__info--photo {
-  width: 50vw;
-  margin-top: 10vh;
-  position: relative;
-}
-
-.aboutme .aboutme__content .aboutme__content__info .aboutme__content__info--photo .aboutme__content__info--photo--shape {
-  margin-left: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 70% 40% 35% 45%;
-  background-color: #000;
-  position: relative;
-  width: 30vh;
-  height: 35vh;
-  -webkit-transform: rotate(45deg) translateX(-50%);
-          transform: rotate(45deg) translateX(-50%);
-}
-
-.aboutme .aboutme__content .aboutme__content__info .aboutme__content__info--photo .aboutme__content__info--photo--shape img {
-  position: absolute;
-  width: 140%;
-  top: -10%;
-  left: -20%;
-  -webkit-transform: rotate(-45deg) translateX(15%);
-          transform: rotate(-45deg) translateX(15%);
 }
 
 .aboutme .aboutme__content .aboutme__content__info .aboutme__content__info--text {
@@ -237,49 +247,121 @@ section .section__tittle:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50vw;
-}
-
-.aboutme .aboutme__content .aboutme__content__info .aboutme__content__info--text * {
-  -webkit-transform: translateX(40%);
-          transform: translateX(40%);
-  width: 50%;
-}
-
-.aboutme .aboutme__cloud {
-  width: 30%;
-  height: 400px;
-  right: 100px;
-  overflow: hidden;
-  margin-left: 75%;
+  margin-left: 50%;
+  opacity: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
 @media (max-width: 1024px) {
-  .aboutme .aboutme__cloud {
+  .aboutme .aboutme__content .aboutme__content__info .aboutme__content__info--text {
+    width: calc(100vw - 77px);
     margin-left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
 }
 
-.aboutme .aboutme__cloud p {
+.aboutme .aboutme__content .aboutme__content__info .aboutme__content__info--text h1 {
+  text-align: center;
+}
+
+.aboutme .aboutme__content .aboutme__cloud {
+  height: 400px;
+  right: 100px;
+  overflow: hidden;
+  margin-top: 5%;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 1024px) {
+  .aboutme .aboutme__content .aboutme__cloud {
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.aboutme .aboutme__content .aboutme__cloud p {
   position: relative;
   border: 1px solid #123;
   width: 98%;
   height: 10px;
 }
 
-.aboutme .aboutme__cloud p:before {
-  content: "";
+.aboutme .aboutme__content .aboutme__cloud p .html__progres {
+  width: 80%;
+}
+
+.aboutme .aboutme__content .aboutme__cloud p .css__progres {
+  width: 80%;
+}
+
+.aboutme .aboutme__content .aboutme__cloud p .js__progres {
+  width: 50%;
+}
+
+.aboutme .aboutme__content .aboutme__cloud p .jQuerty__progres {
+  width: 50%;
+}
+
+.aboutme .aboutme__content .aboutme__cloud p .react__progres {
+  width: 30%;
+}
+
+.aboutme .aboutme__content .aboutme__cloud p .ps__progres {
+  width: 30%;
+}
+
+.aboutme .aboutme__content .aboutme__cloud p span {
   position: absolute;
   left: -100%;
-  width: 100%;
-  height: 10px;
+  height: 100%;
   background-color: #123;
-  -webkit-animation: progres 5s linear;
-          animation: progres 5s linear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.aboutme .aboutme__content--photo {
+  width: 50vw;
+  margin-top: 10vh;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .aboutme .aboutme__content--photo {
+    width: calc(100vw - 77px);
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 100vh;
+  }
+}
+
+.aboutme .aboutme__content--photo .aboutme__content--photo--shape {
+  margin-left: -50%;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5%;
+  position: relative;
+  width: 45vh;
+  height: 90%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.aboutme .aboutme__content--photo .aboutme__content--photo--shape img {
+  position: absolute;
+  height: 80%;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-55%);
+          transform: translateX(-55%);
 }
 
 .projects {
@@ -525,26 +607,27 @@ footer {
   padding: 20px 0 10px 0;
 }
 
-@-webkit-keyframes logo {
-  10% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.moveRight {
+  -webkit-animation: moveRight 1s;
+          animation: moveRight 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-@keyframes logo {
-  10% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.moveLeft {
+  -webkit-animation: moveLeft 2s;
+          animation: moveLeft 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.progres {
+  -webkit-animation: progres 3s;
+          animation: progres 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes progres {
@@ -562,6 +645,104 @@ footer {
   }
   100% {
     left: 0%;
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  56% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  56% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveRight {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  100% {
+    left: 120%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  100% {
+    left: 120%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveLeft {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  90% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  90% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
