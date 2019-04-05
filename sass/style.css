@@ -402,7 +402,7 @@ section .section__tittle:after {
 }
 
 .projects .projects__sort .active {
-  background-color: #08fdd8;
+  background-color: #f84545;
 }
 
 .projects .projects__items {

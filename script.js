@@ -15,7 +15,7 @@ document.addEventListener("scroll", () => {
       element.classList.add("progres");
     });
   }
-  if (scrollY > (about.scrollHeight + aboutme.scrollHeight) / 1.1) {
+  if (scrollY > (about.scrollHeight + aboutme.scrollHeight) / 1.2) {
     console.log("siema");
     projectsItems.classList.add("moveTop");
   }
