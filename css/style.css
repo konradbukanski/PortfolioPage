@@ -262,6 +262,13 @@ section .section__tittle:after {
       justify-content: space-around;
 }
 
+@media (max-width: 1024px) {
+  .aboutme__content .aboutme__content--profiles {
+    width: 80%;
+    padding: 0 10%;
+  }
+}
+
 .aboutme__content .aboutme__content--profiles a {
   width: 50px;
 }
@@ -275,6 +282,12 @@ section .section__tittle:after {
 .aboutme__content .aboutme__content--profiles a img:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+}
+
+@media (max-width: 475px) {
+  .aboutme__content .aboutme__content--profiles a {
+    width: 70px;
+  }
 }
 
 .aboutme__content .aboutme__content__info {
@@ -299,6 +312,13 @@ section .section__tittle:after {
   color: #cccccc;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+@media (max-width: 475px) {
+  .aboutme__content .aboutme__content__info .content__info--text {
+    text-align: left;
+    padding: 0 10%;
+  }
 }
 
 .aboutme__content .aboutme__content__info .content__info--technologies {
@@ -349,6 +369,13 @@ section .section__tittle:after {
           box-shadow: 10px 10px 300px 0px #f2f2f2;
   -webkit-filter: grayscale(15%);
           filter: grayscale(15%);
+}
+
+@media (max-width: 475px) {
+  .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie img {
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
+  }
 }
 
 .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie span {
@@ -449,6 +476,12 @@ section .section__tittle:after {
 .skills .skills__details .skills__other .skills_technologies img {
   width: 80px;
   padding: 13px;
+}
+
+@media (max-width: 475px) {
+  .skills .skills__details .skills__other .skills_technologies {
+    width: 60px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -568,9 +601,10 @@ section .section__tittle:after {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 475px) {
   .projects .projects__items .projects__item {
     width: 90%;
+    padding: 0 10%;
   }
 }
 
@@ -667,6 +701,13 @@ section .section__tittle:after {
   }
 }
 
+@media (max-width: 1024px) {
+  .contact .contact__options .contact__form {
+    width: 80%;
+    padding: 0 10%;
+  }
+}
+
 .contact .contact__options .contact__form .contact__form--content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,6 +725,12 @@ section .section__tittle:after {
   font-weight: bold;
   color: #e0e0e0;
   border-radius: 10%;
+}
+
+@media (max-width: 475px) {
+  .contact .contact__options .contact__form .contact__form--content h1 {
+    font-size: 30px;
+  }
 }
 
 .contact .contact__options .contact__form .contact__form--content input {
@@ -734,8 +781,8 @@ section .section__tittle:after {
 
 .contact .contact__options .contact__map {
   width: 55%;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: invert(100%) grayscale(90%);
+          filter: invert(100%) grayscale(90%);
 }
 
 @media (max-width: 1440px) {
@@ -752,6 +799,7 @@ section .section__tittle:after {
   .contact .contact__options .contact__map iframe {
     width: 80%;
     padding: 0 10%;
+    border-radius: 30px;
   }
 }
 
