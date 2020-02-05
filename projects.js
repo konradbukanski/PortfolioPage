@@ -12,14 +12,16 @@ let projects = [
         name: "Money Menager",
         link: "",
         github: "",
-        category: "ReactJS"
+        category: "ReactJS",
+        src: "img/moneymenage.png"
     },
     {
         id: 2,
         name: "Money Menager",
         link: "",
         github: "",
-        category: "PHP"
+        category: "PHP",
+        src: "img/moneymenage.png"
     },
     {
         id: 3,
@@ -34,14 +36,16 @@ let projects = [
         name: "Money Menager",
         link: "",
         github: "",
-        category: "ReactJS"
+        category: "ReactJS",
+        src: "img/moneymenage.png"
     },
     {
         id: 5,
         name: "Money Menager",
         link: "",
         github: "",
-        category: "PHP"
+        category: "PHP",
+        src: "img/moneymenage.png"
     },
     {
         id: 7,
@@ -56,14 +60,16 @@ let projects = [
         name: "Money Menager",
         link: "",
         github: "",
-        category: "ReactJS"
+        category: "ReactJS",
+        src: "img/moneymenage.png"
     },
     {
         id: 9,
         name: "Money Menager",
         link: "",
         github: "",
-        category: "PHP"
+        category: "PHP",
+        src: "img/moneymenage.png"
     },
 ]
 let projectsActive = [
