@@ -28,7 +28,7 @@ body {
 
 section {
   min-height: 100vh;
-  width: calc(100vw - 60px);
+  width: calc(100% - 60px);
   margin-left: 60px;
   position: relative;
   overflow: hidden;
