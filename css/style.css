@@ -5,7 +5,7 @@ body {
   background-color: #363636;
   font-size: 18px;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inconsolata', monospace;
   color: #cccccc;
 }
 
@@ -34,8 +34,8 @@ section {
   position: relative;
   overflow: hidden;
   background: black;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(26%, #261111), color-stop(41%, #430d0d), color-stop(64%, #341717), to(black));
-  background: linear-gradient(180deg, black 0%, #261111 26%, #430d0d 41%, #341717 64%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(20%, #151111), color-stop(40%, #381818), color-stop(60%, #381818), color-stop(80%, #151111), to(black));
+  background: linear-gradient(180deg, black 0%, #151111 20%, #381818 40%, #381818 60%, #151111 80%, black 100%);
 }
 
 @media (max-width: 768px) {
@@ -57,7 +57,7 @@ section .section__tittle:after {
   position: absolute;
   width: 60px;
   height: 5px;
-  background-color: #000000;
+  background-color: #cccccc;
   bottom: -5px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -68,7 +68,9 @@ section .section__tittle:after {
   position: fixed;
   height: 100%;
   width: 60px;
-  background-color: #000000;
+  background-color: #111111;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   color: #cccccc;
 }
 
@@ -130,7 +132,6 @@ section .section__tittle:after {
   background-position: center;
   background-size: cover;
   background-blend-mode: saturation;
-  font-family: 'Francois One', sans-serif;
   letter-spacing: 5px;
 }
 
@@ -143,6 +144,7 @@ section .section__tittle:after {
           transform: translate(-50%, -50%);
   left: 50%;
   font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 .about .about__text h1 {
@@ -187,6 +189,7 @@ section .section__tittle:after {
   -webkit-animation: opacity 7s;
           animation: opacity 7s;
   letter-spacing: 3px;
+  font-family: 'Inconsolata', monospace;
   text-transform: uppercase;
 }
 
@@ -221,13 +224,15 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content--photo .aboutme__content--photoshape {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 200px;
   height: 200px;
-  background-color: #f1f1f1;
+  background-color: #161616;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -257,8 +262,8 @@ section .section__tittle:after {
 
 .aboutme__content .aboutme__content--profiles a img {
   width: 100%;
-  -webkit-filter: grayscale(85%);
-          filter: grayscale(85%);
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
 }
 
 .aboutme__content .aboutme__content--profiles a img:hover {
@@ -271,13 +276,16 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content__info .content__info--text {
+  padding: 15px;
   text-align: justify;
   width: 100%;
-  font-weight: 400;
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 23px;
+  font-family: 'Indie Flower', cursive;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #cccccc;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .aboutme__content .aboutme__content__info .content__info--technologies {
@@ -287,7 +295,7 @@ section .section__tittle:after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 50px 15%;
+  padding: 0px 15%;
   width: 70%;
 }
 
@@ -310,9 +318,9 @@ section .section__tittle:after {
   width: 50%;
   text-align: center;
   padding: 15px 10px;
-  font-size: 17px;
+  font-size: 19px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .skills .skills__details {
@@ -342,8 +350,9 @@ section .section__tittle:after {
   width: 100%;
   height: 30px;
   background-color: #cccccc;
-  border-radius: 1px;
+  border-radius: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 .skills .skills__details .skills__progres .skill__progres .progres {
@@ -396,8 +405,10 @@ section .section__tittle:after {
 .skills .skills__details .skills__languages .skill__progres {
   width: 100%;
   height: 30px;
-  background-color: #f2f2f2;
+  background-color: #cccccc;
   border-radius: 1px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .skills .skills__details .skills__languages .skill__progres .progres {
@@ -487,8 +498,8 @@ section .section__tittle:after {
   position: relative;
   overflow: hidden;
   border-radius: 2px;
-  -webkit-box-shadow: 0 3px 5px -1px rgba(30, 41, 69, 0.2), 0 1px 18px 0 rgba(30, 41, 69, 0.12), 0 6px 10px 0 rgba(30, 41, 69, 0.14);
-          box-shadow: 0 3px 5px -1px rgba(30, 41, 69, 0.2), 0 1px 18px 0 rgba(30, 41, 69, 0.12), 0 6px 10px 0 rgba(30, 41, 69, 0.14);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 @media (max-width: 1440px) {
@@ -613,6 +624,7 @@ section .section__tittle:after {
   font-size: 40px;
   font-weight: bold;
   color: #e0e0e0;
+  border-radius: 10%;
 }
 
 .contact .contact__options .contact__form .contact__form--content input {
@@ -623,6 +635,7 @@ section .section__tittle:after {
           box-sizing: border-box;
   border: 0;
   background-color: #3c3c3c;
+  border-radius: 10%;
 }
 
 .contact .contact__options .contact__form .contact__form--content textarea {
@@ -636,6 +649,7 @@ section .section__tittle:after {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-radius: 10%;
 }
 
 .contact .contact__options .contact__form .contact__form--content button {
@@ -650,6 +664,7 @@ section .section__tittle:after {
   margin-left: calc(80% - 88px);
   border-radius: 5px;
   cursor: pointer;
+  border-radius: 10%;
 }
 
 .contact .contact__options .contact__form .contact__form--content button:hover {
@@ -659,13 +674,19 @@ section .section__tittle:after {
 }
 
 .contact .contact__options .contact__map {
-  width: 100%;
+  width: 55%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 @media (max-width: 1440px) {
   .contact .contact__options .contact__map {
     width: 100%;
   }
+}
+
+.contact .contact__options .contact__map iframe {
+  border-radius: 20px;
 }
 
 footer {
