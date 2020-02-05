@@ -28,7 +28,7 @@ body {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: calc(100vw - 77px);
   margin-left: 60px;
   position: relative;
@@ -145,6 +145,12 @@ section .section__tittle:after {
   left: 50%;
   font-size: 1.5em;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .about .about__text {
+    font-size: 27px;
+  }
 }
 
 .about .about__text h1 {
@@ -275,6 +281,13 @@ section .section__tittle:after {
   padding: 20px 20%;
 }
 
+@media (max-width: 1024px) {
+  .aboutme__content .aboutme__content__info {
+    width: 80%;
+    padding: 0 10%;
+  }
+}
+
 .aboutme__content .aboutme__content__info .content__info--text {
   padding: 15px;
   text-align: justify;
@@ -299,11 +312,35 @@ section .section__tittle:after {
   width: 70%;
 }
 
+@media (max-width: 1024px) {
+  .aboutme__content .aboutme__content__info .content__info--technologies {
+    width: 100%;
+    padding: 50px 5%;
+  }
+}
+
+@media (max-width: 475px) {
+  .aboutme__content .aboutme__content__info .content__info--technologies {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30 10%;
+  }
+}
+
 .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie {
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 475px) {
+  .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie {
+    padding: 10px 0;
+    width: 90%;
+  }
 }
 
 .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie img {
@@ -329,6 +366,15 @@ section .section__tittle:after {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 1024px) {
+  .skills .skills__details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .skills .skills__details .skills__progres {
@@ -381,6 +427,13 @@ section .section__tittle:after {
   width: 30%;
 }
 
+@media (max-width: 1024px) {
+  .skills .skills__details .skills__progres {
+    width: 80%;
+    padding: 0 10%;
+  }
+}
+
 .skills .skills__details .skills__other {
   width: 40%;
 }
@@ -396,6 +449,13 @@ section .section__tittle:after {
 .skills .skills__details .skills__other .skills_technologies img {
   width: 80px;
   padding: 13px;
+}
+
+@media (max-width: 1024px) {
+  .skills .skills__details .skills__other {
+    width: 80%;
+    padding: 0 10%;
+  }
 }
 
 .skills .skills__details .skills__languages .skill__name {
@@ -598,7 +658,6 @@ section .section__tittle:after {
 }
 
 .contact .contact__options .contact__form {
-  height: 100vh;
   width: 45%;
 }
 
@@ -687,6 +746,13 @@ section .section__tittle:after {
 
 .contact .contact__options .contact__map iframe {
   border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+  .contact .contact__options .contact__map iframe {
+    width: 80%;
+    padding: 0 10%;
+  }
 }
 
 footer {
