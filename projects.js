@@ -86,14 +86,16 @@ let projectsActive = [
         name: "Money Menager",
         link: "",
         github: "",
-        category: "ReactJS"
+        category: "ReactJS",
+        src: "img/moneymenage.png"
     },
     {
         id: 2,
         name: "Money Menager",
         link: "",
         github: "",
-        category: "PHP"
+        category: "PHP",
+        src: "img/moneymenage.png"
     },
 ]
 const items = document.querySelector(".projects__items")
