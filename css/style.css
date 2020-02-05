@@ -4,7 +4,6 @@ body {
           box-sizing: border-box;
   background-color: #363636;
   font-size: 18px;
-  overflow-x: hidden;
   font-family: 'Inconsolata', monospace;
   color: #cccccc;
 }
@@ -223,6 +222,7 @@ section .section__tittle:after {
 
 .aboutme {
   position: relative;
+  width: 100%;
 }
 
 .aboutme__content .aboutme__content--photo {
@@ -253,7 +253,7 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content--profiles {
-  padding: 30px 40%;
+  margin: 20px 0;
   width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,7 +286,8 @@ section .section__tittle:after {
 
 @media (max-width: 475px) {
   .aboutme__content .aboutme__content--profiles a {
-    width: 70px;
+    width: 60px;
+    padding: 20px 0;
   }
 }
 
@@ -302,7 +303,6 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content__info .content__info--text {
-  padding: 15px;
   text-align: justify;
   width: 100%;
   font-weight: 100;
@@ -317,7 +317,6 @@ section .section__tittle:after {
 @media (max-width: 475px) {
   .aboutme__content .aboutme__content__info .content__info--text {
     text-align: left;
-    padding: 0 10%;
   }
 }
 
@@ -345,7 +344,7 @@ section .section__tittle:after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 30 10%;
+    padding: 5px 10%;
   }
 }
 
@@ -365,16 +364,14 @@ section .section__tittle:after {
 
 .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie img {
   width: 50px;
-  -webkit-box-shadow: 10px 10px 300px 0px #f2f2f2;
-          box-shadow: 10px 10px 300px 0px #f2f2f2;
   -webkit-filter: grayscale(15%);
           filter: grayscale(15%);
 }
 
 @media (max-width: 475px) {
   .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie img {
-    -webkit-box-shadow: 0;
-            box-shadow: 0;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
 }
 
@@ -471,6 +468,9 @@ section .section__tittle:after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .skills .skills__details .skills__other .skills_technologies img {
@@ -479,8 +479,9 @@ section .section__tittle:after {
 }
 
 @media (max-width: 475px) {
-  .skills .skills__details .skills__other .skills_technologies {
-    width: 60px;
+  .skills .skills__details .skills__other .skills_technologies img {
+    width: 27%;
+    padding: 8px;
   }
 }
 
@@ -604,7 +605,7 @@ section .section__tittle:after {
 @media (max-width: 475px) {
   .projects .projects__items .projects__item {
     width: 90%;
-    padding: 0 10%;
+    margin: 20px 5%;
   }
 }
 
@@ -685,9 +686,9 @@ section .section__tittle:after {
 @media (max-width: 1440px) {
   .contact .contact__options {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -716,8 +717,7 @@ section .section__tittle:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 15%;
-  margin-top: 20px;
+  width: 100%;
 }
 
 .contact .contact__options .contact__form .contact__form--content h1 {
@@ -734,7 +734,7 @@ section .section__tittle:after {
 }
 
 .contact .contact__options .contact__form .contact__form--content input {
-  width: calc(40%);
+  width: calc(50% - 15px);
   margin: 5px;
   padding: 20px;
   -webkit-box-sizing: border-box;
@@ -745,8 +745,7 @@ section .section__tittle:after {
 }
 
 .contact .contact__options .contact__form .contact__form--content textarea {
-  max-width: calc(80% + 12px);
-  min-width: calc(80% + 12px);
+  width: calc(100% - 10px);
   margin: 5px;
   min-height: 150px;
   max-height: 350px;
@@ -760,14 +759,13 @@ section .section__tittle:after {
 
 .contact .contact__options .contact__form .contact__form--content button {
   width: 100px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 20px 0;
   border: 1px solid #e0e0e0;
   color: #e0e0e0;
   text-transform: uppercase;
   padding: 10px;
   background-color: #252525;
-  margin-left: calc(80% - 88px);
+  margin-left: calc(100% - 100px);
   border-radius: 5px;
   cursor: pointer;
   border-radius: 10%;
@@ -798,6 +796,7 @@ section .section__tittle:after {
 @media (max-width: 1024px) {
   .contact .contact__options .contact__map iframe {
     width: 80%;
+    height: 300px;
     padding: 0 10%;
     border-radius: 30px;
   }
