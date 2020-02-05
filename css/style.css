@@ -28,7 +28,7 @@ body {
 
 section {
   min-height: 100vh;
-  width: calc(100vw - 77px);
+  width: calc(100vw - 60px);
   margin-left: 60px;
   position: relative;
   overflow: hidden;
@@ -222,7 +222,6 @@ section .section__tittle:after {
 
 .aboutme {
   position: relative;
-  width: 100%;
 }
 
 .aboutme__content .aboutme__content--photo {
@@ -253,6 +252,7 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content--profiles {
+  padding: 0px 40%;
   margin: 20px 0;
   width: 20%;
   display: -webkit-box;
@@ -260,13 +260,6 @@ section .section__tittle:after {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-@media (max-width: 1024px) {
-  .aboutme__content .aboutme__content--profiles {
-    width: 80%;
-    padding: 0 10%;
-  }
 }
 
 .aboutme__content .aboutme__content--profiles a {
@@ -681,9 +674,15 @@ section .section__tittle:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  padding: 0 10%;
+  position: relative;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .contact .contact__options {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -694,12 +693,6 @@ section .section__tittle:after {
 
 .contact .contact__options .contact__form {
   width: 45%;
-}
-
-@media (max-width: 1440px) {
-  .contact .contact__options .contact__form {
-    width: 100%;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -741,7 +734,13 @@ section .section__tittle:after {
           box-sizing: border-box;
   border: 0;
   background-color: #3c3c3c;
-  border-radius: 10%;
+  border-radius: 30px;
+}
+
+@media (max-width: 475px) {
+  .contact .contact__options .contact__form .contact__form--content input {
+    border-radius: 5px;
+  }
 }
 
 .contact .contact__options .contact__form .contact__form--content textarea {
@@ -754,7 +753,13 @@ section .section__tittle:after {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 10%;
+  border-radius: 30px;
+}
+
+@media (max-width: 475px) {
+  .contact .contact__options .contact__form .contact__form--content textarea {
+    border-radius: 5px;
+  }
 }
 
 .contact .contact__options .contact__form .contact__form--content button {
@@ -778,27 +783,27 @@ section .section__tittle:after {
 }
 
 .contact .contact__options .contact__map {
-  width: 55%;
+  position: relative;
+  width: 45%;
   -webkit-filter: invert(100%) grayscale(90%);
           filter: invert(100%) grayscale(90%);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .contact .contact__options .contact__map {
-    width: 100%;
+    width: 80%;
   }
 }
 
 .contact .contact__options .contact__map iframe {
   border-radius: 20px;
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
   .contact .contact__options .contact__map iframe {
-    width: 80%;
     height: 300px;
     padding: 0 10%;
-    border-radius: 30px;
   }
 }
 
