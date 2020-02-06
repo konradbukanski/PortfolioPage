@@ -260,6 +260,13 @@ section .section__tittle:after {
       justify-content: space-around;
 }
 
+@media (max-width: 475px) {
+  .aboutme__content .aboutme__content--profiles {
+    width: 80%;
+    padding: 20px 10%;
+  }
+}
+
 .aboutme__content .aboutme__content--profiles a {
   width: 50px;
 }
@@ -599,8 +606,8 @@ section .section__tittle:after {
 
 @media (max-width: 475px) {
   .projects .projects__items .projects__item {
-    width: 90%;
-    margin: 20px 5%;
+    width: 100%;
+    margin: 20px 0%;
   }
 }
 
@@ -699,8 +706,8 @@ section .section__tittle:after {
 
 @media (max-width: 1024px) {
   .contact .contact__options .contact__form {
-    width: 80%;
-    padding: 0 10%;
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -793,7 +800,7 @@ section .section__tittle:after {
 
 @media (max-width: 1024px) {
   .contact .contact__options .contact__map {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -805,7 +812,7 @@ section .section__tittle:after {
 @media (max-width: 1024px) {
   .contact .contact__options .contact__map iframe {
     height: 300px;
-    padding: 0 10%;
+    padding: 0 0%;
   }
 }
 
