@@ -1,22 +1,27 @@
-const aboutText = document.querySelector(".aboutme__content__info--text");
-const aboutImage = document.querySelector(".aboutme__content--photo--shape");
-const aboutCloud = document.querySelectorAll(".aboutme__cloud p span");
-const projectsItems = document.querySelector(".projects__items");
+let skills = true
+let projectActive = true
 
-const aboutme = document.querySelector(".aboutme");
-const about = document.querySelector(".about");
 
 document.addEventListener("scroll", () => {
-  if (scrollY > about.scrollHeight / 2) {
-    console.log("hello");
-    aboutText.classList.add("moveLeft");
-    aboutImage.classList.add("moveRight");
-    aboutCloud.forEach(element => {
-      element.classList.add("progres");
+  let scroll = document.documentElement.scrollTop
+  if( scroll < aboutmeHeight+skillsHeight - aboutmeHeight/2 && scroll > aboutmeHeight - aboutmeHeight/2){
+    document.querySelector(".aboutme__content--photo").classList.add("showPhoto");
+    document.querySelector(".aboutme__content--profiles").classList.add("showProfiles");
+    document.querySelector(".content__info--text").classList.add("showText");
+    document.querySelector(".content__info--technologies").classList.add("showTechnologies");
+  
+  }
+  if( skills && scroll < aboutmeHeight+skillsHeight+projectsHeight - aboutmeHeight/2 && scroll > (aboutmeHeight + skillsHeight - aboutmeHeight/2) ){
+    skills = !skills
+    document.querySelectorAll(".progres").forEach(element => {
+      element.classList.add("progresAnime");
+      document.querySelectorAll(".skills_technologies img").forEach(element => {
+        element.classList.add("showElement");
+      });
     });
   }
-  if (scrollY > (about.scrollHeight + aboutme.scrollHeight) / 1.2) {
-    console.log("siema");
-    projectsItems.classList.add("moveTop");
-  }
+  if( projectActive && scroll < aboutmeHeight+skillsHeight+projectsHeight+contactHeight-aboutmeHeight/2 && scroll > (aboutmeHeight + skillsHeight + projectsHeight - aboutmeHeight/2)){
+    projectActive = !projectActive
+    document.querySelector(".projects__items").classList.add("showProjects");
+  };
 });
