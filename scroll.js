@@ -38,8 +38,13 @@ const skillsHeight = document.querySelector(".skills").offsetHeight
 const projectsHeight = document.querySelector(".projects").offsetHeight
 const contactHeight = document.querySelector(".contact").offsetHeight
 
+activeSection ()
 
 document.addEventListener("scroll", () => {
+    activeSection ()
+})
+
+function activeSection () {
     let scroll = document.documentElement.scrollTop
     console.log()
     if( scroll <= aboutmeHeight-aboutmeHeight/2){
@@ -67,5 +72,4 @@ document.addEventListener("scroll", () => {
     }else{
         document.querySelector(".contactme").style.color = "#cccccc"
     }
-    
-})
+}
