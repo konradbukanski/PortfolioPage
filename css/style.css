@@ -372,6 +372,7 @@ section .section__tittle:after {
   .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie img {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
+    width: 40px;
   }
 }
 
@@ -382,6 +383,12 @@ section .section__tittle:after {
   font-size: 19px;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+@media (max-width: 475px) {
+  .aboutme__content .aboutme__content__info .content__info--technologies .content__info--technologie span {
+    font-size: 16px;
+  }
 }
 
 .skills .skills__details {
