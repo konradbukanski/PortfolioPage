@@ -120,10 +120,6 @@ section .section__tittle:after {
   cursor: pointer;
 }
 
-.menu .menu__icons i:hover {
-  color: #f84545;
-}
-
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,6 +221,7 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content--photo {
+  opacity: 0;
   position: relative;
 }
 
@@ -252,6 +249,7 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content--profiles {
+  opacity: 0;
   padding: 0px 40%;
   margin: 20px 0;
   width: 20%;
@@ -296,6 +294,7 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content__info .content__info--text {
+  opacity: 0;
   text-align: justify;
   width: 100%;
   font-weight: 100;
@@ -314,6 +313,7 @@ section .section__tittle:after {
 }
 
 .aboutme__content .aboutme__content__info .content__info--technologies {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,7 +411,7 @@ section .section__tittle:after {
 
 .skills .skills__details .skills__progres .skill__progres {
   width: 100%;
-  height: 30px;
+  height: 20px;
   background-color: #cccccc;
   border-radius: 20px;
   position: relative;
@@ -420,6 +420,7 @@ section .section__tittle:after {
 
 .skills .skills__details .skills__progres .skill__progres .progres {
   height: 100%;
+  margin-left: -100%;
   background-image: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#da1b60));
   background-image: linear-gradient(to right, #ff8a00, #da1b60);
 }
@@ -429,19 +430,19 @@ section .section__tittle:after {
 }
 
 .skills .skills__details .skills__progres .skill__progres .CSS3 {
-  width: 70%;
+  width: 85%;
 }
 
 .skills .skills__details .skills__progres .skill__progres .JavaScript {
-  width: 70%;
-}
-
-.skills .skills__details .skills__progres .skill__progres .JQuery {
-  width: 50%;
+  width: 60%;
 }
 
 .skills .skills__details .skills__progres .skill__progres .ReactJS {
   width: 30%;
+}
+
+.skills .skills__details .skills__progres .skill__progres .NodeJS {
+  width: 10%;
 }
 
 @media (max-width: 1024px) {
@@ -467,6 +468,7 @@ section .section__tittle:after {
 }
 
 .skills .skills__details .skills__other .skills_technologies img {
+  opacity: 0;
   width: 80px;
   padding: 13px;
 }
@@ -491,7 +493,7 @@ section .section__tittle:after {
 
 .skills .skills__details .skills__languages .skill__progres {
   width: 100%;
-  height: 30px;
+  height: 20px;
   background-color: #cccccc;
   border-radius: 1px;
   border-radius: 20px;
@@ -500,9 +502,11 @@ section .section__tittle:after {
 
 .skills .skills__details .skills__languages .skill__progres .progres {
   height: 100%;
-  width: 60%;
+  margin-left: -100%;
   background-image: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#da1b60));
   background-image: linear-gradient(to right, #ff8a00, #da1b60);
+  -webkit-transition: 5s;
+  transition: 5s;
 }
 
 .skills .skills__details .skills__languages .skill__progres .ENG {
@@ -576,6 +580,7 @@ section .section__tittle:after {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 50px;
+  opacity: 0;
 }
 
 .projects .projects__items .projects__item {
@@ -814,51 +819,78 @@ footer {
   padding: 20px 0 10px 0;
 }
 
-.moveRight {
-  -webkit-animation: moveRight 1s;
-          animation: moveRight 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+.showElement {
+  -webkit-animation: showElement 2s;
+          animation: showElement 2s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.moveLeft {
-  -webkit-animation: moveLeft 2s;
-          animation: moveLeft 2s;
+.showProjects {
+  -webkit-animation: showElement 1.5s;
+          animation: showElement 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.moveTop {
-  -webkit-animation: moveTop 1.5s;
-          animation: moveTop 1.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.progres {
+.progresAnime {
   -webkit-animation: progres 3s;
           animation: progres 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
+.showPhoto {
+  -webkit-animation: showElement 2s;
+          animation: showElement 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.showProfiles {
+  -webkit-animation: showElement 2s;
+          animation: showElement 2s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.showText {
+  -webkit-animation: showElement 2s;
+          animation: showElement 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.showTechnologies {
+  -webkit-animation: showElement 2s;
+          animation: showElement 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes progres {
   0% {
-    left: -100%;
+    margin-left: -100%;
   }
   100% {
-    left: 0%;
+    margin-left: 0%;
   }
 }
 
 @keyframes progres {
   0% {
-    left: -100%;
+    margin-left: -100%;
   }
   100% {
-    left: 0%;
+    margin-left: 0%;
   }
 }
 
@@ -910,58 +942,26 @@ footer {
   }
 }
 
-@-webkit-keyframes moveLeft {
+@-webkit-keyframes showElement {
   0% {
-    left: 100%;
-    opacity: 0;
-  }
-  90% {
-    left: 100%;
-  }
-  100% {
-    left: 0%;
-    opacity: 1;
-  }
-}
-
-@keyframes moveLeft {
-  0% {
-    left: 100%;
-    opacity: 0;
-  }
-  90% {
-    left: 100%;
-  }
-  100% {
-    left: 0%;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes moveTop {
-  0% {
-    margin-top: 100%;
     opacity: 0;
   }
   40% {
     opacity: 0;
   }
   100% {
-    margin-top: 0%;
     opacity: 1;
   }
 }
 
-@keyframes moveTop {
+@keyframes showElement {
   0% {
-    margin-top: 100%;
     opacity: 0;
   }
   40% {
     opacity: 0;
   }
   100% {
-    margin-top: 0%;
     opacity: 1;
   }
 }
