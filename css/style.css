@@ -462,9 +462,6 @@ section .section__tittle:after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .skills .skills__details .skills__other .skills_technologies img {
