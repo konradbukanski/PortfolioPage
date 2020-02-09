@@ -74,29 +74,46 @@ let projects = [
 ]
 let projectsActive = [
     {
-        id: 0,
-        name: "Money Menager",
-        link: "https://konradbukanski.github.io/MoneyManager/.",
-        github: "https://github.com/konradbukanski/MoneyManager",
-        category: "Bootstrap",
-        src: "img/moneymenage.png"
-    },
-    {
         id: 1,
-        name: "Money Menager",
-        link: "",
+        name: "Homester.pl",
+        link: "https://kancelariaprzeciwegzekucyjna.pl/",
         github: "",
         category: "ReactJS",
-        src: "img/moneymenage.png"
+        src: "img/homester.png"
     },
     {
         id: 2,
-        name: "Money Menager",
-        link: "",
+        name: "Sterecki.pl",
+        link: "https://konradbukanski.github.io/buildmenager/",
+        github: "https://github.com/konradbukanski/buildmenager",
+        category: "PHP",
+        src: "img/sterecki.png"
+    },
+    {
+        id: 3,
+        name: "Wypozyczalniaskawina.pl",
+        link: "https://www.wypozyczalniaskawina.pl/",
         github: "",
         category: "PHP",
-        src: "img/moneymenage.png"
+        src: "img/wypozyczalniakamperow.png"
     },
+    {
+        id: 4,
+        name: "zdanamatma.pl",
+        link: "https://www.zdanamatma.pl/",
+        github: "",
+        category: "PHP",
+        src: "img/zdanamatma2.png"
+    },
+    {
+        id: 5,
+        name: "zdanamatma.pl",
+        link: "https://konradbukanski.github.io/zdanamatma/",
+        github: "",
+        category: "PHP",
+        src: "img/zdanamatma.png"
+    },
+
 ]
 const items = document.querySelector(".projects__items")
 
